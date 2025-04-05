@@ -7,13 +7,16 @@ apply(plugin = "io.spring.dependency-management")
 group = "com.lipanre.demo"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenLocal()
-    maven {
-        url = uri("https://maven.aliyun.com/repository/public/")
+allprojects {
+    repositories {
+        mavenLocal()
+        maven {
+            url = uri("https://maven.aliyun.com/repository/public/")
+        }
+        mavenCentral()
     }
-    mavenCentral()
 }
+
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
