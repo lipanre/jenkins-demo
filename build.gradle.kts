@@ -8,6 +8,10 @@ group = "com.lipanre.demo"
 version = "1.0-SNAPSHOT"
 
 repositories {
+    mavenLocal()
+    maven {
+        url = uri("https://maven.aliyun.com/repository/public/")
+    }
     mavenCentral()
 }
 
